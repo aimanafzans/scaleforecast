@@ -4,13 +4,13 @@
 
 # ScaleForecast: Multi-Technique Demand Forecasting Engine
 
-### 📝 *ITT440 - INDIVIDUAL ASSIGNMENT*
+###  *ITT440 - INDIVIDUAL ASSIGNMENT*
 
-**👨‍🎓 NAME : NUR AIMAN AFZAN BIN AZHAR**
+**NAME : NUR AIMAN AFZAN BIN AZHAR**
 
-**🎓 STUDENT ID : 2025226838**
+**STUDENT ID : 2025226838**
 
-**👥 GROUP : M3CS2554C**
+**GROUP : M3CS2554C**
 
 **GITHUB LINK : [ITT440 - GITHUB](https://github.com/aimanafzans/scaleforecast)**
 
@@ -18,7 +18,7 @@
 
 ---
 
-## 📝 Project Overview
+## Project Overview
 
 ScaleForecast is a menu-driven Python application that forecasts e-commerce demand — moving averages, volatility, safety stock, reorder points, and stockout risk — across catalogs of up to 2,000,000+ SKUs. It also benchmarks that exact forecasting workload across four Python execution strategies: **Sequential**, **Concurrent (With GIL)**, **Concurrent (No GIL)**, and **Multiprocessing**.
 
@@ -37,9 +37,7 @@ ScaleForecast is a menu-driven Python application that forecasts e-commerce dema
 - [Benchmark Methodology](#benchmark-methodology)
 - [Results](#results)
 - [Project Structure](#project-structure)
-- [Testing](#testing)
 - [Design Notes](#design-notes)
-- [Demonstration Video](#demonstration-video)
 
 ---
 
@@ -241,18 +239,7 @@ scaleforecast/
 ├── reports/                    # Generated forecast reports (git-ignored)
 └── benchmarks/                 # Benchmark results and charts (git-ignored)
 
-tests/                          # pytest test suite
-PRD.md                          # Full product requirements document
 ```
-
-## Testing
-
-```bash
-pip install pytest
-pytest tests/
-```
-
-The test suite covers dataset generation, the forecasting engine, interpreter detection, the CLI, and benchmark aggregation logic.
 
 ## Design Notes
 
@@ -261,8 +248,6 @@ The test suite covers dataset generation, the forecasting engine, interpreter de
 The fix: every technique is dispatched to its own subprocess with an interpreter explicitly pinned for that technique — standard Python for Sequential, Concurrent (With GIL), and Multiprocessing; `python3.13t` for Concurrent (No GIL) — regardless of which interpreter launched the main application. Each subprocess self-reports its actual GIL state (`sys._is_gil_enabled()`), and the benchmark cross-checks it against what was expected, surfacing a visible warning on any mismatch rather than trusting the label silently. This was verified to produce identical results whether the app itself is launched with `python`, `python3.13`, or `python3.13t`.
 
 **Why `current_stock` isn't purely random.** Stock levels are derived from each SKU's own average daily sales via a randomized days-of-supply multiplier, rather than generated independently. This keeps the at-risk-of-stockout rate in a realistic 5–20% range instead of the ~50% that results from fully independent random stock values, and produces a defensible, category-correlated risk pattern (see Results).
-
-Full design rationale, requirements, and decision history are documented in [`PRD.md`](PRD.md).
 
 ---
 
