@@ -2,7 +2,7 @@
 
 ![Uploading image.png…](https://github.com/aimanafzans/scaleforecast/blob/main/assets/scaleforecast-logo.png)
 
-# ScaleForecast
+# ScaleForecast: Multi-Technique Demand Forecasting Engine
 
 ### 📝 *ITT440 - INDIVIDUAL ASSIGNMENT*
 
@@ -12,9 +12,9 @@
 
 **👥 GROUP : M3CS2554C**
 
-**GITHUB LINK : [ITT440 - GITHUB]([https://github.com/aimanafzans/scaleforecast])**
+**GITHUB LINK : [ITT440 - GITHUB](https://github.com/aimanafzans/scaleforecast)**
 
-**YOUTUBE LINK : [ITT440 - INDIVIDUAL ASSIGNMENT]([https://youtu.be/VqJLgOwQ_0E])**
+**YOUTUBE LINK : [ITT440 - INDIVIDUAL ASSIGNMENT](https://youtu.be/VqJLgOwQ_0E)**
 
 ---
 
