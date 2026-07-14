@@ -10,7 +10,7 @@
 
 **👥 GROUP : M3CS2554C**
 
-**GITHUB LINK : [ITT440 - GITHUB](https://github.com/Saidatul123/Smart_Bil_Utility)**
+**GITHUB LINK : [ITT440 - GITHUB]([https://github.com/Saidatul123/Smart_Bil_Utility](https://github.com/aimanafzans/scaleforecast))**
 
 **YOUTUBE LINK : [ITT440 - INDIVIDUAL ASSIGNMENT]([https://youtu.be/ibz1cFCJ8Lo](https://youtu.be/VqJLgOwQ_0E))**
 
