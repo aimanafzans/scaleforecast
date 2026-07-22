@@ -140,33 +140,33 @@ Launch the app and pick an option from the main menu:
 
 ### Main menu
 
-![Main menu](docs/screenshots/01_main_menu.png)
+![Main menu](assets/01_main_menu.png)
 
 ### Dataset listing (Option 1 / 2 / 3)
 
-![Dataset table](docs/screenshots/02_dataset_table.png)
+![Dataset table](assets/02_dataset_table.png)
 
 ### Execution technique selection (Option 3)
 
 Note "Concurrent (No GIL)" is greyed out here because this machine only had the standard CPython interpreter installed — this is the app's real availability-detection behaviour, not a mockup.
 
-![Technique menu](docs/screenshots/03_technique_menu.png)
+![Technique menu](assets/03_technique_menu.png)
 
 ### Forecast reports listing (Option 4)
 
-![Reports table](docs/screenshots/04_reports_table.png)
+![Reports table](assets/04_reports_table.png)
 
 ### Benchmark results — 10,000 SKUs (Option 5)
 
 At small volumes, Multiprocessing's process-startup overhead outweighs its parallel gains, and GIL-bound threading gives essentially no speedup.
 
-![Benchmark 10K SKUs](docs/screenshots/05_benchmark_10k.png)
+![Benchmark 10K SKUs](assets/05_benchmark_10k.png)
 
 ### Benchmark results — 2,000,000 SKUs (Option 5)
 
 At large volumes, both no-GIL threading and multiprocessing clearly pull ahead of the sequential baseline, while GIL-bound threading stays flat.
 
-![Benchmark 2M SKUs](docs/screenshots/06_benchmark_2m.png)
+![Benchmark 2M SKUs](assets/06_benchmark_2m.png)
 
 ---
 
@@ -191,31 +191,31 @@ Charts below are generated automatically by `chart_generator.py` after a benchma
 
 ### Speedup vs. dataset size
 
-![Speedup vs size](docs/charts/chart_speedup_vs_size.png)
+![Speedup vs size](assets/chart_speedup_vs_size_20260714_073311.png)
 
 ### Throughput vs. dataset size
 
-![Throughput vs size](docs/charts/chart_throughput_vs_size.png)
+![Throughput vs size](assets/chart_throughput_vs_size_20260714_073311.png)
 
 ### Parallel efficiency vs. dataset size
 
-![Efficiency vs size](docs/charts/chart_efficiency_vs_size.png)
+![Efficiency vs size](assets/chart_efficiency_vs_size_20260714_073311.png)
 
 ### Wall-clock time vs. dataset size
 
-![Time vs size](docs/charts/chart_time_vs_size.png)
+![Time vs size](assets/chart_time_vs_size_20260714_073311.png)
 
 ### CPU utilization by technique
 
-![CPU utilization](docs/charts/chart_cpu_util.png)
+![CPU utilization](assets/chart_cpu_util_20260714_073311.png)
 
 ### Peak memory by technique
 
-![Memory usage](docs/charts/chart_memory.png)
+![Memory usage](assets/chart_memory_20260714_073311.png)
 
 ### Setup overhead breakdown
 
-![Overhead breakdown](docs/charts/chart_overhead_breakdown.png)
+![Overhead breakdown](assets/chart_overhead_breakdown_20260714_073311.png)
 
 ### Summary (2,000,000 SKUs)
 
@@ -266,6 +266,6 @@ The screenshots and charts in this README were produced from real runs of the ap
    - Option 4 → the reports table, and one drill-down (e.g. at-risk SKUs)
    - Option 5 → the results table after a benchmark completes, ideally once for a small tier (10K) and once for a large tier (1M or 2M) to show the performance divergence
 
-2. **Charts** — run Option 5 (Run Performance Benchmark) against each volume tier; `chart_generator.py` writes PNGs to `scaleforecast/benchmarks/<run_id>/`. Copy the ones you want into `docs/charts/`.
+2. **Charts** — run Option 5 (Run Performance Benchmark) against each volume tier; `chart_generator.py` writes PNGs to `scaleforecast/benchmarks/<run_id>/`. Copy the ones you want into `assets/`.
 
 3. For a wider terminal window (so tables don't wrap awkwardly in the screenshot), maximize the terminal or set its column width to ~120 before capturing.

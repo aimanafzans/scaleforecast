@@ -1,0 +1,5 @@
+Dataset,Technique,Average Time (s),Typical Variation (±s),Speedup,Efficiency (%),Throughput (rec/s),Avg CPU Usage (%),Setup Overhead (s),Peak Memory (MB),Num Workers,Num Records,Interpreter,GIL Warning
+2M SKUs,Sequential,148.1178,6.1247,1.0,100.0,13518.0,6.2,17.6645,1719.4,1,2000000,GIL-enabled,
+2M SKUs,Concurrent (With GIL),150.2941,7.5679,0.9871,12.3,13329.1,6.2,18.9809,1732.5,8,2000000,GIL-enabled,
+2M SKUs,Concurrent (No GIL),86.4683,0.8233,1.7131,21.4,23131.3,45.6,25.0169,3575.4,8,2000000,Free-threaded,
+2M SKUs,Multiprocessing,51.6191,0.1557,2.8695,35.9,38745.6,42.3,18.4115,3960.1,8,2000000,GIL-enabled,
