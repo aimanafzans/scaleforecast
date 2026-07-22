@@ -243,29 +243,3 @@ For each SKU, the engine computes:
 This same computation runs identically across all four execution techniques — only the parallelization strategy differs, not the forecasting logic itself.
 
 ---
-
-## Project Structure
-
-See [Architecture](#architecture) above for the full module layout.
-
----
-
-## Regenerating the Screenshots / Charts Yourself
-
-The screenshots and charts in this README were produced from real runs of the app. To regenerate them on your own machine (e.g. after a UI change):
-
-1. **Dataset & technique menu screenshots** — run `python main.py`, and on Windows/macOS/Linux use your terminal's built-in screenshot tool:
-   - **Windows Terminal**: `Win + Shift + S` (Snipping Tool) after navigating to the relevant screen.
-   - **macOS Terminal/iTerm**: `Cmd + Shift + 4` then `Space` to snap the terminal window.
-   - **Linux**: `gnome-screenshot` / `flameshot` / your desktop environment's screenshot shortcut.
-
-   Recommended screens to capture:
-   - Main menu (right after launch)
-   - Option 1 → after a dataset finishes generating (shows the summary line)
-   - Option 3 → the technique selection list
-   - Option 4 → the reports table, and one drill-down (e.g. at-risk SKUs)
-   - Option 5 → the results table after a benchmark completes, ideally once for a small tier (10K) and once for a large tier (1M or 2M) to show the performance divergence
-
-2. **Charts** — run Option 5 (Run Performance Benchmark) against each volume tier; `chart_generator.py` writes PNGs to `scaleforecast/benchmarks/<run_id>/`. Copy the ones you want into `assets/`.
-
-3. For a wider terminal window (so tables don't wrap awkwardly in the screenshot), maximize the terminal or set its column width to ~120 before capturing.
